@@ -258,11 +258,11 @@ $hand-stroke: path('M327.223 308.7C328.023 273.6 380.223 273.3 380.923 308.7V335
 $speed: 2.2s;
 
 .touchon-hand-fill {
-  fill: #ffffff;
+  fill: transparent;
   filter: drop-shadow(0px 6px 10px rgba(0, 0, 0, 0.5));
 }
 .touchon-hand-stroke {
-  stroke: #000;
+  stroke: #50505059;
   stroke-width: 12;
   stroke-linecap: round;
   stroke-linejoin: round;
