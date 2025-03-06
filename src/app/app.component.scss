@@ -1,31 +1,5 @@
-$color-env          : #0077B2;
-$color-env2         : darken($color-env, 3%);
-$color-flap         : darken($color-env, 20%);
-$color-bg           : lighten($color-env, 48%);
-$color-heart        : #D00000; 
-
-$env-border-radius  : 6px;
-$env-width          : 280px;
-$env-height         : 180px;
-$heart-width        : 50px;
-
 
 @import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,600|Tulpen+One&display=swap');
-
-  /* colors */
-  $body-bg: #FAFAFA;
-  $page-bg: #F5F5F5;
-  $dark-text: #2A2935;
-  
-  /* spacing */
-  /* this is what defines the global scale */
-  $baseline: 12px;
-  
-  /* fonts */
-  $book-title: 'Tulpen One', sans-serif;
-  $title: 'Cormorant Garamond', serif;
-  $body: 'Cormorant Garamond', serif;
-  $base-size: $baseline * 1.2;
 
 .main {
     position: relative;
@@ -33,14 +7,14 @@ $heart-width        : 50px;
 
 #envelope {
     position: relative;
-    width: $env-width;
-    height: $env-height;
-    border-bottom-left-radius: $env-border-radius;
-    border-bottom-right-radius: $env-border-radius;
+    width: 280px;
+    height: 50px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
     margin-left: auto;
     margin-right: auto;
     top: 150px;
-    background-color: $color-flap;
+    background-color: #00334c;
     box-shadow: 0 4px 20px rgba(0,0,0,.2);
 }
 
@@ -52,21 +26,21 @@ $heart-width        : 50px;
 }
 
 .flap {
-    border-left: ($env-width / 2) solid transparent;
-    border-right: ($env-width / 2) solid transparent;
-    border-bottom: ($env-height / 2) - 8 solid transparent; /* a little smaller */
-    border-top: ($env-height / 2) + 8 solid $color-flap; /* a little larger */
+    border-left: (280px / 2) solid transparent;
+    border-right: (280px / 2) solid transparent;
+    border-bottom: (180px / 2) - 8 solid transparent; /* a little smaller */
+    border-top: (180px / 2) + 8 solid #00334c; /* a little larger */
     transform-origin: top;
     pointer-events: none;
 }
 
 .pocket {
-    border-left: ($env-width / 2) solid $color-env;
-    border-right: ($env-width / 2) solid $color-env;
-    border-bottom: ($env-height / 2) solid $color-env2;
-    border-top: ($env-height / 2) solid transparent;
-    border-bottom-left-radius: $env-border-radius;
-    border-bottom-right-radius: $env-border-radius;
+    border-left: 140px solid #0077B2;
+    border-right: (280px / 2) solid #0077B2;
+    border-bottom: (180px / 2) solid #006da3;
+    border-top: (180px / 2) solid transparent;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
 }
 
 .letter {
@@ -77,7 +51,7 @@ $heart-width        : 50px;
     margin-right: auto;
     height: 90%;
     top: 5%;
-    border-radius: $env-border-radius;
+    border-radius: 6px;
     box-shadow: 0 2px 26px rgba(0,0,0,.12);
 }
 
@@ -138,7 +112,7 @@ $heart-width        : 50px;
 }
 .hearts {
     position: absolute;
-    top: ($env-height / 2);
+    top: (180px / 2);
     left: 0;
     right: 0;
     z-index: 2;
@@ -154,12 +128,12 @@ $heart-width        : 50px;
 .heart:after {
     position: absolute;
     content: "";
-    left: $heart-width;
+    left: 50px;
     top: 0;
-    width: $heart-width;
-    height: ($heart-width * 1.6);
-    background: $color-heart;
-    border-radius: $heart-width $heart-width 0 0;
+    width: 50px;
+    height: (50px * 1.6);
+    background: #D00000;
+    border-radius: 50px 50px 0 0;
     transform: rotate(-45deg);
     transform-origin: 0 100%;
     pointer-events: none;
@@ -255,12 +229,8 @@ $heart-width        : 50px;
     }
 }
 
-body {
-    background-color: $color-bg;
-}
-
 .envlope-wrapper {
-    height: ($env-height + 200px);
+    height: (180px + 200px);
     opacity: 1;
     transition: opacity .5s;
     top: 100px;
@@ -333,7 +303,6 @@ body {
 }
 
 body {
-  background-color: $body-bg;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -387,7 +356,7 @@ img {
     transform: rotateY(0deg);
     transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);
     transform-origin: 0% 0%;
-    background-color: $page-bg;
+    background-color:#F5F5F5;
     background-image: linear-gradient(90deg, rgba(227,227,227,1) 0%, rgba(247,247,247,0) 18%);
     
     &:nth-of-type(1) {
@@ -410,7 +379,7 @@ img {
       right: 0;
       pointer-events: none;
       transform-style: preserve-3d;
-      background-color: $page-bg;
+      background-color: #F5F5F5;
       background-image: linear-gradient(90deg, rgba(227,227,227,1) 0%, rgba(247,247,247,0) 18%);
     }
     
