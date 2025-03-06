@@ -1,44 +1,32 @@
 <div class="main">
-  <div class="envlope-wrapper" id="envlope-wrapper">
     <div id="envelope" class="close" (click)="open()">
+      <img src="../assets/wax.png" class="wax" alt="">
       <div class="front flap"></div>
       <div class="front pocket"></div>
       <div class="letter">
-        <div class="words line1"></div>
-        <div class="words line2"></div>
-        <div class="words line3"></div>
-        <div class="words line4"></div>
-      </div>
-      <div class="hearts">
-        <div class="heart a1"></div>
-        <div class="heart a2"></div>
-        <div class="heart a3"></div>
+        <div class="cover" id="cover">
+          <div class="book">
+            <label for="page-1" class="book__page book__page--1">
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/193203/1111.jpg" alt="">
+            </label>
+      
+            <label for="page-2" class="book__page book__page--4">
+                <img src="../assets/test2.png" alt="">
+            </label>
+      
+            <input type="radio" name="page" id="page-1" />
+      
+            <input type="radio" name="page" id="page-2" />
+            <label class="book__page book__page--2">
+              <div class="book__page-front">
+                  <img src="../assets/invitation.png" alt="">
+              </div>
+              <div class="book__page-back">
+                  <img src="../assets/test1.jpg" alt="">
+              </div>
+            </label>
+          </div>
+        </div>
       </div>
     </div>
-
-  </div>
-
-  <div class="cover" id="cover">
-    <div class="book">
-      <label for="page-1" class="book__page book__page--1">
-        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/193203/1111.jpg" alt="">
-      </label>
-
-      <label for="page-2" class="book__page book__page--4">
-          <img src="../assets/test1.jpg" alt="">
-      </label>
-
-      <input type="radio" name="page" id="page-1" (click)="playSound()"/>
-
-      <input type="radio" name="page" id="page-2" (click)="playSound()"/>
-      <label class="book__page book__page--2">
-        <div class="book__page-front">
-            <img src="../assets/invitation.png" alt="">
-        </div>
-        <div class="book__page-back">
-            <img src="../assets/test2.png" alt="">
-        </div>
-      </label>
-    </div>
-  </div>
 </div>

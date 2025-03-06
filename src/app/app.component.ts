@@ -20,28 +20,10 @@ export class AppComponent {
       if(element){
         setTimeout(() => {
           element.classList.add('my-class');
-        }, 2000); 
+        }, 1000); 
 
       }
-      const cover = document.getElementById('cover');
-      const envlopeWrapper = document.getElementById('envlope-wrapper');
-
-      if(envlopeWrapper) {
-        setTimeout(() => {
-          envlopeWrapper.classList.add('hide');
-        }, 3000); // Delay of 2 seconds
-
-        setTimeout(() => {
-          envlopeWrapper.classList.add('hide2');
-        }, 3500); // Delay of 2 seconds
-    }
-
-      if(cover) {
-        setTimeout(() => {
-          cover.classList.add('show');
-
-        }, 3500); // Delay of 2 seconds
-     }
+  
     }
 
     close() {
@@ -49,7 +31,6 @@ export class AppComponent {
       if (element) {
         element.classList.add('close');
         element.classList.remove('open');
-
       }
     }
 
