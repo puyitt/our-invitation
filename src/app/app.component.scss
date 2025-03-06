@@ -1,5 +1,4 @@
 
-@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,600|Tulpen+One&display=swap');
 
 .main {
     position: relative;
@@ -156,12 +155,6 @@
     -moz-transform: scale(0.6);
     transform: scale(0.6);
     opacity: 1;
-    -webkit-animation: 
-        slideUp 4s linear 1, 
-        sideSway 2s ease-in-out 4 alternate;
-    -moz-animation: 
-        slideUp 4s linear 1, 
-        sideSway 2s ease-in-out 4 alternate;
     animation-fill-mode: forwards;
     animation-delay: .7s;
 }
@@ -171,12 +164,6 @@
     -moz-transform: scale(1);
     transform: scale(1);
     opacity: 1;
-    -webkit-animation: 
-        slideUp 5s linear 1, 
-        sideSway 4s ease-in-out 2 alternate;
-    -moz-animation: 
-        slideUp 5s linear 1, 
-        sideSway 4s ease-in-out 2 alternate;
     animation-fill-mode: forwards;
     animation-delay: .7s;
 }
@@ -186,12 +173,6 @@
     -moz-transform: scale(0.8);
     transform: scale(0.8);
     opacity: 1;
-    -webkit-animation: 
-        slideUp 7s linear 1, 
-        sideSway 2s ease-in-out 6 alternate;
-    -moz-animation: 
-        slideUp 7s linear 1, 
-        sideSway 2s ease-in-out 6 alternate; 
     animation-fill-mode: forwards;
     animation-delay: .7s;
 }
