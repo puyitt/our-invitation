@@ -1,7 +1,4 @@
-* {
-    box-sizing: border-box;
-}
-  
+
 
 .main {
     position: relative;
@@ -86,11 +83,11 @@
     transform: translateY(0px); 
     transition: transform .4s ease, z-index 1s;
     z-index: 1;
-    transform: translate(-50%,-50%) scale(0.3);
+    transform: translate(-50%,-50%) scale(0.35);
 }
 
 .open .letter {
-    transform: translate(-50%,-82%) scale(0.3);
+    transform: translate(-50%,-84%) scale(0.35);
     transition: transform .4s .6s ease, z-index .6s;
     z-index: 2;
 }
@@ -103,15 +100,6 @@
         z-index: 4;
     }
 }
-
-
-// body {
-//   height: 100vh;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   justify-content: center;
-// }
 
 .cover {
     width: 720px;
