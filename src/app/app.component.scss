@@ -6,10 +6,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url(../assets/img1.JPG);
-    background-position: center;
     background-size: cover;
-    background-repeat: no-repeat;
+    background-position: center;
+    animation: slideshow 15s infinite;
 
     .overlay {
       position: absolute;
@@ -20,6 +19,14 @@
       top: 0;
     }
 }
+
+@keyframes slideshow {
+  0% { background-image: url('../assets/img1.jpg'); }
+  33% { background-image: url('../assets/img1_1.JPG'); }
+  66% { background-image: url('../assets/img1_2.jpg'); }
+  100% { background-image: url('../assets/img1.jpg'); }
+}
+
 
 #envelope {
     position: relative;
