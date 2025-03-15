@@ -19,16 +19,23 @@
     <img src="../assets/wax.png" class="wax" alt="">
     <div class="front flap"></div>
     <div class="front pocket"></div>
-    <div class="letter">
-      <div class="cover" id="cover">
+    <!-- <div class="letter"> -->
+      <div class="book">
+        <div id="pages" class="pages">
+          <div #page class="page" *ngFor="let img of images; let i = index" (click)="onPageClick($event)">
+            <img [src]="img" alt="Page {{ i + 1 }}">
+          </div>
+        </div>
+      </div>
+      <!-- <div class="cover" id="cover">
         <div class="book">
           <label for="page-1" class="book__page book__page--1">
-            <img src="../assets/img1.JPG" alt="">
+            <img src="../assets/4.JPG" alt="">
             
           </label>
 
           <label for="page-2" class="book__page book__page--4">
-            <img src="../assets/test2.png" alt="">
+            <img src="../assets/3.JPG" alt="">
           </label>
 
           <input type="radio" name="page" id="page-1" (click)="playSound()"/>
@@ -36,7 +43,7 @@
           <input type="radio" name="page" id="page-2" (click)="playSound()"/>
           <label class="book__page book__page--2">
             <div class="book__page-front">
-              <img src="../assets/invitation.png" alt="">
+              <img src="../assets/1.JPG" alt="">
               <svg width="70" height="70" viewBox="0 0 640 640" fill="none" xmlns="http://www.w3.org/2000/svg" class="hand">
                 <g class="touchon">
                   <g id="touchon-body">
@@ -54,7 +61,7 @@
               </svg>
             </div>
             <div class="book__page-back">
-              <img src="../assets/test1.jpg" alt="">
+              <img src="../assets/2.JPG" alt="">
               <svg width="70" height="70" viewBox="0 0 640 640" fill="none" xmlns="http://www.w3.org/2000/svg" class="hand hand2">
                 <g class="touchon">
                   <g id="touchon-body">
@@ -73,7 +80,7 @@
             </div>
           </label>
         </div>
-      </div>
-    </div>
+      </div> -->
+    <!-- </div> -->
   </div>
 </div>
