@@ -57,21 +57,21 @@
     transition: border 0.5s;
 }
 
-.letter {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    background-color: #fff;
-    width: 720px;
-    height: 690px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 6px;
-    // box-shadow: 0 2px 26px rgba(0,0,0,.12);
-    // background-image: url(../assets/img1.JPG);
-    // background-size: contain;
-    // background-position: left;
-}
+// .letter {
+//     position: absolute;
+//     left: 50%;
+//     top: 50%;
+//     background-color: #fff;
+//     width: 720px;
+//     height: 690px;
+//     margin-left: auto;
+//     margin-right: auto;
+//     border-radius: 6px;
+//     // box-shadow: 0 2px 26px rgba(0,0,0,.12);
+//     // background-image: url(../assets/img1.JPG);
+//     // background-size: contain;
+//     // background-position: left;
+// }
 
 .open .flap {
     transform: rotateX(180deg);
@@ -84,17 +84,18 @@
     transition: transform .4s .6s ease, z-index 1s;
     z-index: 3;
 }
+
 .close .book {
     transform: translateY(0px); 
     transition: transform .4s ease, z-index 1s;
     z-index: 1;
-    transform: translate(-50%,-40%) scale(0.35)  rotate(-90deg);
+    transform: translate(-50%,-32.5%) scale(0.5) rotate(-90deg);
     // transform: translate(-50%,-70%) scale(0.35) rotate(90deg);
 }
 
 .open .book {
     // transform: translate(-50%,-84%) scale(0.35);
-    transform: translate(-50%,-70%) scale(0.35)  rotate(-90deg);
+    transform: translate(-50%,-70%) scale(0.5)  rotate(-90deg);
     transition: transform .4s .6s ease, z-index .6s;
     z-index: 2;
 }
@@ -387,7 +388,10 @@ img {
             border-bottom-left-radius: 6px;
             border-bottom-right-radius: 6px;
         }
+
+        
     }
+    
 }
 
 .hand {
