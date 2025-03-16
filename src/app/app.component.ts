@@ -5,9 +5,9 @@ import { AfterViewInit, Component, ViewChildren, QueryList, ElementRef } from '@
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent {
   title = 'invitation';
-  @ViewChildren('page') pages!: QueryList<ElementRef>;
+  // @ViewChildren('page') pages!: QueryList<ElementRef>;
 
 
   open() {
@@ -44,38 +44,67 @@ export class AppComponent implements AfterViewInit {
   }
 
 
-  images: string[] = [
-    '../assets/1.JPG',
-    '../assets/2.JPG',
-    '../assets/3.JPG',
-    '../assets/4.JPG'
-  ];
+  // images: string[] = [
+  //   '../assets/1.JPG',
+  //   '../assets/2.JPG',
+  //   '../assets/3.JPG',
+  //   '../assets/4.JPG'
+  // ];
 
-  ngAfterViewInit() {
-    const pagesArray = this.pages.toArray().map(el => el.nativeElement);
+  // ngAfterViewInit() {
+  //   const pagesArray = this.pages.toArray().map(el => el.nativeElement);
 
-    // Set zIndex for even pages
-    pagesArray.forEach((page, i) => {
-      if (i % 2 === 0) {
-        page.style.zIndex = (pagesArray.length - i).toString();
-      }
-      page.dataset.pageNum = (i + 1).toString();
-    });
+  //   // Set zIndex for even pages
+  //   pagesArray.forEach((page, i) => {
+  //     if (i % 2 === 0) {
+  //       page.style.zIndex = (pagesArray.length - i).toString();
+  //     }
+  //     page.dataset.pageNum = (i + 1).toString();
+  //   });
+  // }
+
+  // onPageClick(event: Event) {
+  //   const page = event.target as HTMLElement | null;
+
+  //   if (!page) return; // Ensure it's not null
+
+  //   const pageNum = Number(page.dataset['pageNum']);
+
+  //   if (pageNum % 2 === 0) {
+  //     page.classList.remove('flipped');
+  //     (page.previousElementSibling as HTMLElement)?.classList.remove('flipped');
+  //   } else {
+  //     page.classList.add('flipped');
+  //     (page.nextElementSibling as HTMLElement)?.classList.add('flipped');
+  //   }
+  // }
+
+  click1() {
+    const element = document.getElementById('page1');
+    const element2 = document.getElementById('page2');
+
+    if (element) {
+      element.classList.toggle('flipped');
+    }
+
+    if (element2) {
+      element2.classList.remove('incz');
+
+    }
   }
 
-  onPageClick(event: Event) {
-    const page = event.target as HTMLElement | null;
+  click2() {
+    const element = document.getElementById('page2');
+    const element1 = document.getElementById('page1');
 
-    if (!page) return; // Ensure it's not null
+    if (element) {
+      element.classList.toggle('flipped');
+      element.classList.add('incz');
 
-    const pageNum = Number(page.dataset['pageNum']);
+    }
+    if (element1) {
+      element1.classList.add('incz');
 
-    if (pageNum % 2 === 0) {
-      page.classList.remove('flipped');
-      (page.previousElementSibling as HTMLElement)?.classList.remove('flipped');
-    } else {
-      page.classList.add('flipped');
-      (page.nextElementSibling as HTMLElement)?.classList.add('flipped');
     }
   }
 }
